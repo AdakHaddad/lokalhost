@@ -1,0 +1,50 @@
+{
+  "$schema": "https://open-design.ai/schemas/plugin.v1.json",
+  "specVersion": "1.0.0",
+  "name": "logo-design",
+  "title": "Logo Design",
+  "version": "1.0.0",
+  "description": "Professional logo and brand-mark design from brief to production-ready SVG files.",
+  "license": "MIT",
+  "tags": [
+    "logo",
+    "branding",
+    "svg",
+    "identity",
+    "design"
+  ],
+  "compat": {
+    "agentSkills": [
+      {
+        "path": "./SKILL.md"
+      }
+    ]
+  },
+  "od": {
+    "kind": "skill",
+    "taskKind": "new-generation",
+    "mode": "prototype",
+    "scenario": "design",
+    "capabilities": [
+      "prompt:inject"
+    ],
+    "useCase": {
+      "query": "Design a professional logo and brand identity for {{brand}}."
+    },
+    "inputs": [
+      {
+        "name": "brand",
+        "type": "string",
+        "required": true,
+        "label": "Brand or product name"
+      }
+    ],
+    "context": {
+      "skills": [
+        {
+          "path": "./SKILL.md"
+        }
+      ]
+    }
+  }
+}
